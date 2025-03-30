@@ -18,3 +18,14 @@ function fetchProductsThen() {
         console.error('Error has occurred:', error); //logs the actual errors
     });
 };
+
+//Task 3
+async function fetchProductsAsync() {
+    try {
+        const response = await fetch('https://www.course-api.com/javascript-store-products') //gets product data
+        const products = await response.json();
+        displayProducts(products); //helper function to render products to page
+    } catch (error) {
+        handleError(error); //if error occurs, it has been passed to here
+    }
+};
