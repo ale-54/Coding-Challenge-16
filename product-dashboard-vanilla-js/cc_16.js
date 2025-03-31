@@ -35,7 +35,7 @@ function displayProducts(products) {
     const productContainer = document.getElementById('product-container'); //selecting product container
     products.slice(0,5).forEach(product => {
         const productCard = document.createElement('div'); //loopig the first 5 products
-        productCard.innerHTML = `<h3>${product.fields.name}</h3><p>$${product.fields.price}</p><img src='${product.fields.image}'>`; //html elements to show product name, price, and image
+        productCard.innerHTML = `<h3>${product.fields.name}</h3><p>$${product.fields.price}</p><img src='${product.fields.image[0].url}'>`; //html elements to show product name, price, and image
         productCard.setAttribute('class', 'product-name');
         productContainer.appendChild(productCard); //appending to container
     })
