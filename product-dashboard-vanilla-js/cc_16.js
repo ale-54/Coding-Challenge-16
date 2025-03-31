@@ -40,3 +40,8 @@ function displayProducts(products) {
         productContainer.appendChild(productCard); //appending to container
     })
 };
+
+//Task 5
+function handleError(error) {
+    console.log('An error has occured:', error);
+}; //logs error message
